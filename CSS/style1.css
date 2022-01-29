@@ -26,6 +26,7 @@ li {
 }
 .popap {
     background-color: #ffffff;
+    visibility: hidden;
 }
 .question {
     font-weight: 400;
@@ -104,12 +105,17 @@ H1 {
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #b59f5b;
-	margin-right: 20px;
+}
+.linkTeg:hover {
+	border-bottom: 1px solid #b59f5b;
 }
 .linkTrend {
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #ffffff;
+}
+.linkTrend:hover {
+	color: #b59f5b;
 }
 .trend1 {
 	background-image: url(../img/trend1.jpg);		
@@ -125,10 +131,7 @@ H1 {
 }
 .insideTrend {
 	opacity: 0.9;
-	margin: 85px auto 25px auto;
-	width: 85%;
 	border: 3px solid #b59f5b;
-	padding-left: 20px;
 }
 .photo {
 	position: relative;
@@ -155,6 +158,9 @@ H1 {
     font-weight: 700;
     text-transform: uppercase;
     color: #0f0d0e;
+}
+.linkPost:hover {
+    color: #b59f5b;
 }
 .author time {
 	font-weight: 400;
@@ -219,6 +225,10 @@ H1 {
 	background-color: #f4f7f6;
 	border: 1px solid #f4f7f6;
 }
+.inputField:active {
+    outline: none;
+	border: 2px solid #b59f5b; /*не работает*/
+}
 .pushbutton {
 	background-color: #b59f5b;
 	border: 1px solid #b59f5b;
@@ -227,9 +237,15 @@ H1 {
 	background-size:40%;
 	background-position: 12px 12px;
 }
+.pushbutton:hover {
+    background-color: #323232;
+}
 .mailField {
     background-color: #f4f7f6;
     border: none;
+}
+.mailField:focus {
+    border: 1px solid #b59f5b; 
 }
 .subscribe {
     font-size: 14px;
@@ -242,6 +258,10 @@ H1 {
 	margin-top: 15px;
 	background-color: #b59f5b;
 	border: none;
+}
+.signature:hover {
+	background-color: #323232;
+    border: none;
 }
 .tags > ul {
     display: flex;
@@ -256,6 +276,10 @@ H1 {
     border: 3px solid #eeeeee;
     padding: 4px 10px 4px 10px;
     margin-right: 4px;
+}
+.tags > ul a:hover {
+    border: 3px solid #b59f5b;
+    color: #000000;
 }
 .themes li {
 	display: flex;
@@ -272,6 +296,9 @@ H1 {
     line-height: 47px;
     font-weight: 700;
     color: #000000;
+}
+.themes a:hover {
+    color: #b59f5b;
 }
 .goods {
 	display: flex;
@@ -292,6 +319,9 @@ H1 {
 	line-height: 22px;
 	font-weight: 700;
 	color: #b59f5b;
+}
+.aboutProduct a:hover {
+	border-bottom: 1px solid #b59f5b;
 }
 .aboutProduct::before {
 	content: "";
@@ -328,6 +358,9 @@ H1 {
 	border: none;
 	margin-right: 3px;
 }
+.purchase:hover {
+    background-color: #323232;
+}
 .purchase span{
 	font-size: 14px;
 	line-height: 40px;
@@ -337,7 +370,7 @@ H1 {
 }
 .topFooter {
 	background-color: #f4f7f6;
-	width: 93%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
     align-items: center;
@@ -510,12 +543,16 @@ H1 {
     .empty {
         padding-top: 20px;
     }
+    .insideTrend {
+        margin:90px 20px 20px 20px;
+        padding: 20px 30px 30px 20px;
+    }
 	.blokTrend {
 		width: 100%;
 	}
 	.linkTrend {
 		font-size: 16px;
-		line-height: 20px;
+		line-height: 16px;
 	}
 	.linkTeg {
 	    font-size: 14px;
@@ -524,6 +561,9 @@ H1 {
 	.posts {
 	    margin: 45px auto 0 auto;
 	    width: 93%;
+    }
+    .post {
+        margin-bottom: 35px;
     }
 	.photo {
 		height: 60vmin;
@@ -559,18 +599,23 @@ H1 {
 		margin: 0 auto 0 auto;
 		width: 93%;
 	}
-		
+    .smallpost {
+        margin-bottom: 20px;
+    }	
 	.fillingsmallPost > time {
 		font-size: 12px;
 		line-height: 10px;
+        vertical-align: 10px;
 	}
 	.fillingsmallPost > span, a {
 		font-size: 14px;
 		line-height: 10px;
 	}
-	.fillingsmallPost > a {
+	.fillingsmallPost  a {
+        vertical-align: 10px;
 		font-size: 14px;
 		line-height: 10px;
+        text-transform: uppercase;
 	}
 	.field {
 		margin: 30px auto 0 auto;
@@ -727,7 +772,6 @@ H1 {
     header {
         background-image: url("../img/banner-bg-tablet.jpg");
         width: 100%;
-        height: 45vw;
     } 
 	.topLine {
 		display: flex;
@@ -761,9 +805,10 @@ H1 {
 	}
 	.whatSite {
 		position: relative;
-		width: 78%;
+		width: 74%;
 		margin: 0 auto;
-		padding: 130px 0 0 0;
+		padding: 95px 0 0 0;
+        padding-bottom: 135px;
 	}
 	h1 {
 		text-align: center;
@@ -776,8 +821,15 @@ H1 {
 	.trend {
 		font-size: 18px;
 		line-height: 29px;
-		padding-top: 30px;
+		padding-top: 45px;
 	}
+    .blokTrend {
+        margin-bottom: 5px;
+    }
+    .linkTrend {
+        font-size: 17px;
+        line-height: 22px;
+    }
     .empty {
         margin-bottom: 30px
     }
@@ -785,13 +837,16 @@ H1 {
         display: flex;
         justify-content:space-between;
     }
+    .listTrends {
+        column-gap: 0.5%;
+   
+    }
 	.blokTrend {
-		width: 49%;
-        margin-right: 2px;
+		width: 49.7%;
 	}
     .insideTrend {
-        padding-bottom: 25px;
-        padding-top: 30px;
+        margin:110px 20px 30px 20px;
+        padding: 30px;
     }
 	.posts {
 	    margin: 30px  30px 0 30px;
@@ -819,21 +874,29 @@ H1 {
     }
     .rightBox {
         width: 100%;
-        margin-right: 20px;
+        margin-right: 40px;
+        margin-left: 20px;
     }	
     .smallpost {
         margin-bottom: 15px;
     }
+    .smallpost a {
+        vertical-align: 5px;
+    }
 	.fillingsmallPost > time {
 		font-size: 12px;
 		line-height: 10px;
+        vertical-align: 5px;
 	}
 	.fillingsmallPost > span, a {
 		font-size: 14px;
 		line-height: 10px;
 	}
+    .fillingsmallPost a {
+        text-transform: uppercase;
+    }
     .field {
-		margin: 20px 0;
+		margin: 70px 0 30px 0;
 		width: 100%;
 	}
 	.inputField {
@@ -856,6 +919,9 @@ H1 {
     .tags > ul {
 		width: 100%;
 	}
+    .tags > ul a {
+    padding: 4px 15px 4px 15px;
+    }
 	.goods {
 		width: 93%;
 		margin: 0 auto;
@@ -883,9 +949,18 @@ H1 {
 	.price {
 		line-height: 49px;
 	}
+    .priceList {
+        margin-bottom: 50px;
+    }
+    .topFooter {
+        padding: 30px 0;
+    }
 	.bottomSite {
 		margin-top: 50px;
 	}
+    .bottomSite p {
+        margin: 30px 0 10px 0;
+    }
 }
 
 
@@ -970,7 +1045,6 @@ H1 {
 	header {
         background-image: url("../img/banner-bg.jpg");
         width: 100%;
-        height: 71vh;
     } 
 	.topLine {
 		display: flex;
@@ -978,11 +1052,12 @@ H1 {
 		align-items: center;
 		padding-top: 25px;
 		margin: 0 auto;
-		width: 70%;
+		width: 1200px;
 	}
 	.logo {
-        width: 15vmax;
+        width: 11vmax;
 		position: relative;
+        margin-left: 20px;
 	}
 	.menu ul {
 		display: flex;
@@ -994,28 +1069,31 @@ H1 {
 		font-weight: 400;
 		text-transform: uppercase;
 		color: #ffffff;
-		margin-right: 15px;
+		margin-left: 37px;
 	}
+    .menuLink:hover {
+        border-bottom: 1px solid #ffffff;
+    }
 	H1 {
 		position: relative;
 	    font-size: 45px;
 		line-height: 75px;
 		font-weight: 700;
-		width: 50%;
+		width: 700px;;
 	    margin: 0 auto;
 		top: 88px;
+        padding-bottom: 15vw;
 	}
     .siteContent {
-        width: 70%;
+        width: 1200px;
         margin: 0 auto;
     }
     .Box {
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
     }
 	.blokTrend {
-		width: 24.6%;
-		margin-right: 3px;
+		width: 24.85%;
 	}
     .trend {
 		font-size: 18px;
@@ -1023,63 +1101,84 @@ H1 {
 		padding-top: 30px;
 	}
     .empty {
+        margin-top: 7px;
         margin-bottom: 30px
     }
+    .listTrends {
+        justify-content: space-between;
+    }
     .insideTrend {
+	    margin: 155px auto 25px auto;
+	    width: 20vw;
+	    padding-left: 30px;
         padding-bottom: 35px;
         padding-top: 30px;
     }
     .linkTeg {
         font-size: 14px;
-        line-height: 40px;
     }
+    .linkPost {
+		font-size: 20px;
+		line-height: 24px;
+	}
     .linkTrend {
         font-size: 20px;
         line-height: 24px;
+        margin-bottom: 20px;
     }
 	.posts {
-	    margin: 45px 30px 0 30px;
-	    width: 90%;
+	    margin: 45px 0 0 20px;
+	    width: 47vw;
     }
     .post {
         display: flex;
+        height: 294px;
         padding-bottom: 40px;
     }
-    .fillingPost {
- 
-    }
-    .linkPost {
-		font-size: 17px;
-		line-height: 22px;
-	}
+
 	.photo {
-        width: 50%;
+        width: 382px;
         margin-right: 30px;
         flex-shrink: 0;
 	}
+    .author {
+        width: 22vw;
+    }
 	.author time {
-		font-size: 15px;
-		line-height: 12px;
+		font-size: 12px;
+		line-height: 40px;
+	}
+    .author span {
+		font-size: 12px;
+		line-height: 40px;
 	}
     .text {
 		font-size: 15px;
 		line-height: 22px;
         border: none;
+        margin-top: 35px;
     }
     .rightBox {
-        width: 35%;
+        width: 23%;
     }
-	.smallposts {
-		width: 100%;
-	}
+    .smallpost {
+        padding-bottom: 20px;
+    }
 		
 	.fillingsmallPost > time {
 		font-size: 12px;
-		line-height: 10px;
+        vertical-align: text-top;
+        line-height: 12px;
 	}
 	.fillingsmallPost > span, a{
 		font-size: 14px;
-		line-height: 10px;
+	}
+    .fillingsmallPost > h4 {
+		font-size: 14px;
+        line-height: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: -8px;
 	}
     .field {
 		margin: 20px 0 20px 0;
@@ -1096,9 +1195,9 @@ H1 {
 	}
    
 	.mailField {
-		width: 100%;
+		width: 93%;
         height: 50px;
-		padding-left: 2%;
+		padding-left: 20px;
 	}
 	.signature {
 		width: 100%;
@@ -1131,6 +1230,7 @@ H1 {
     }
 	.productName {
 	    font-size: 20px;
+        margin-bottom: 15px;
     }
     .briefly {
 	    font-size: 15px;
@@ -1143,10 +1243,14 @@ H1 {
 	}
 	.bottomSite {
 		margin: 0 auto;
-        width: 70%;
+        width: 1200px;
         padding-top: 60px;
         
 	}
+    .bottomFooter {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
 }
 
 

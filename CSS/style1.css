@@ -18,6 +18,16 @@ html, body {
 	height: 100%;
 	font-family: 'Open Sans';
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} 
 a {
   text-decoration: none;
 }
@@ -225,7 +235,7 @@ H1 {
 	background-color: #f4f7f6;
 	border: 1px solid #f4f7f6;
 }
-.inputField:active {
+.inputField:hover:active{
     outline: none;
 	border: 2px solid #b59f5b; /*не работает*/
 }
@@ -285,7 +295,8 @@ H1 {
 	display: flex;
 	border-bottom: 1px solid #eeeeee;
 }
-.themes p {
+.themes a span {
+    vertical-align: top;
 	font-size: 12px;
 	line-height: 36px;
 	font-weight: 700;
@@ -370,18 +381,12 @@ H1 {
 }
 .topFooter {
 	background-color: #f4f7f6;
-	width: 100%;
 	display: flex;
 	justify-content: center;
     align-items: center;
-	margin: 0 auto;
-	padding: 15px 0;
 }
 	
-.visually-hidden {
-	display: none;
-}
-.bottomSite a {
+.tweet, .pinterest, .facebook, .instagram, .tumblr {
 	display: inline-block;
 	width: 25px;
 	height: 25px;
@@ -405,13 +410,11 @@ H1 {
 .tumblr {
 	background-image: url(../svg/003-tumblr.svg);
 }
-.bottomSite p {
-	text-align: center;
+.bottomFooter {
 	font-size: 12px;
 	line-height: 40px;
 	font-weight: 700;
 	color: #999999;
-	padding: 20px 0;
 }
 
 /* смартфоны портретное*/
@@ -1128,7 +1131,7 @@ H1 {
     }
 	.posts {
 	    margin: 45px 0 0 20px;
-	    width: 47vw;
+	    width: 800px;
     }
     .post {
         display: flex;
@@ -1141,9 +1144,7 @@ H1 {
         margin-right: 30px;
         flex-shrink: 0;
 	}
-    .author {
-        width: 22vw;
-    }
+
 	.author time {
 		font-size: 12px;
 		line-height: 40px;
@@ -1153,13 +1154,15 @@ H1 {
 		line-height: 40px;
 	}
     .text {
+        max-height: 10vh;
+        overflow-y: auto;
 		font-size: 15px;
 		line-height: 22px;
         border: none;
         margin-top: 35px;
     }
     .rightBox {
-        width: 23%;
+        width: 280px;
     }
     .smallpost {
         padding-bottom: 20px;
@@ -1241,16 +1244,21 @@ H1 {
 	.price {
 		line-height: 49px;
 	}
+    .topFooter {
+        padding: 30px 0;
+        margin-bottom: 30px;
+    }
 	.bottomSite {
 		margin: 0 auto;
         width: 1200px;
-        padding-top: 60px;
-        
+        margin-top: 60px;
 	}
     .bottomFooter {
-        padding-bottom: 30px;
-        padding-top: 30px;
+        display: block;
+        width: 218px;
+        margin: 0 auto;
     }
+  
 }
 
 

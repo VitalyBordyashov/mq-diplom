@@ -34,17 +34,85 @@ a {
 li {
   list-style-type: none;
 }
+.close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../svg/form-x.svg) no-repeat right center;
+    margin-left: 88%;
+    top: -25px;
+}
 .popap {
-    background-color: #ffffff;
     visibility: hidden;
+    left: 40%;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 300px;
+    height:500px;
+    position: fixed;
+    top: 100px;
+    z-index: 10;
+}
+.radio {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+}
+.radioText {
+    font-size: 14px;
+    }
+.radio:checked ~ .radioText::before {
+    background-image: url(../svg/form-circle.svg);
+}
+.radioText::before {
+    padding-left: 5px;
+    vertical-align: bottom;
+    z-index: 10;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../svg/form-empty-circle.svg");
+    background-repeat: no-repeat;
+    background-position: centercenter;
+    background-size: 20px;
 }
 .question {
-    font-weight: 400;
-	color: #0f0d0e;
+    font-size: 13px;
+    font-weight: 600;
     margin-bottom: 10px;
+    margin-top: 20px;
+}
+.dropDownList {
+    font-family: OpenSans;
+    background-color: #f4f7f6;
+    outline: none;
+    border: none;
+    color: #000000;
+    appearance: none;
+    background: url(../svg/form-arrows.svg) no-repeat right center;
+    background-size: 13px;
+    background-position: right 5px top 50%, 0 0;
+    padding-left: 15px;
+    font-size: 12px;
+    height: 50px;
+    width: 100%;
+    opacity: 0.54;
+}
+.detail {
+    outline: none;
+    border: none;
+    background-color: #f4f7f6;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 15px;
+    height: 130px;
+    margin-top: 20px;
 }
 .shipment {
-    width: 50%;
+    width: 100%;
 	height: 50px;
 	background-color: #b59f5b;
 	border: none;
@@ -86,7 +154,7 @@ H1 {
 }
 .empty {
     width: 66px;
-    border-top: 3px solid #b59f5b;
+    border-top: 4px solid #b59f5b;
     margin: 0 auto;
 }
 
@@ -138,6 +206,9 @@ H1 {
 }
 .trend4 {
 	background-image: url(../img/trend4.jpg);	
+}
+.post {
+    height: auto;
 }
 .insideTrend {
 	opacity: 0.9;
@@ -192,6 +263,7 @@ H1 {
 }
 .smallpost {
 	display: flex;
+    height: auto;
 }
 .smallphoto {
 	position: relative;
@@ -231,13 +303,14 @@ H1 {
 	display: flex;
 }
 .inputField {
+    outline: none;
+    border: none;
 	padding-left: 20px;
 	background-color: #f4f7f6;
-	border: 1px solid #f4f7f6;
 }
-.inputField:hover:active{
+.inputField:focus {
     outline: none;
-	border: 2px solid #b59f5b; /*не работает*/
+	border: 2px solid #b59f5b;
 }
 .pushbutton {
 	background-color: #b59f5b;
@@ -253,9 +326,10 @@ H1 {
 .mailField {
     background-color: #f4f7f6;
     border: none;
+    outline: none;
 }
 .mailField:focus {
-    border: 1px solid #b59f5b; 
+    border: 2px solid #b59f5b; 
 }
 .subscribe {
     font-size: 14px;
@@ -320,11 +394,22 @@ H1 {
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #0f0d0e;
+    margin-bottom: 15px;
 }
 .briefly {
 	line-height: 22px;
 	font-weight: 400;
 	color: #0f0d0e;
+}
+.aboutProduct {
+	position: relative;
+	width: 100%;
+	height: auto;
+	border: 3px solid #b59f5b;
+	left: -10px;
+	padding: 10px;
+	top: -30px;
+	padding-top: 30px;
 }
 .aboutProduct a {
 	line-height: 22px;
@@ -334,14 +419,9 @@ H1 {
 .aboutProduct a:hover {
 	border-bottom: 1px solid #b59f5b;
 }
-.aboutProduct::before {
-	content: "";
-	border: 3px solid #b59f5b;
-}
 .priceList {
 	display: flex;
 	justify-content: space-between;
-    margin-bottom: 15px;
 	margin-top: 15px;
 }
 .oldPrice {
@@ -367,7 +447,6 @@ H1 {
 	height: 50px;
 	background-color: #b59f5b;
 	border: none;
-	margin-right: 3px;
 }
 .purchase:hover {
     background-color: #323232;
@@ -411,85 +490,22 @@ H1 {
 	background-image: url(../svg/003-tumblr.svg);
 }
 .bottomFooter {
+    display: block;
 	font-size: 12px;
 	line-height: 40px;
 	font-weight: 700;
 	color: #999999;
+    width: 220px;
+	margin: 0 auto;
 }
 
 /* смартфоны портретное*/
 
 @media (max-width: 640px) and (orientation:portrait) {
-    .close {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        display: block;
-        background: url(../svg/form-x.svg) no-repeat right center;
-        margin-left: 50vw;
-        bottom: 505px;
-    }
     .popap {
-        padding: 3vw;
-        width: 50vw;
-        height: 470px;
-        display: block;
-        position: fixed;
-        top: 40px;
-        left: 20vw;
-        z-index: 10;
-    }
-    .radio {
-        position: absolute;
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        width: 1px;
-    }
-    .radioText {
-        font-size: 14px;
-        font-family: OpenSans;
-    }
-    .radio:checked ~ .radioText::before {
-        background-image: url(../svg/form-circle.svg);
-    }
-    .radioText::before {
-        padding-left: 5px;
-        vertical-align: bottom;
-        z-index: 10;
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-image: url("../svg/form-empty-circle.svg");
-        background-repeat: no-repeat;
-        background-position: centercenter;
-        background-size: 20px;
-    }
-    .question {
-        font-size: 12px;
-    }
-    .dropDownList {
-        appearance: none;
-        background: url(../svg/form-arrows.svg) no-repeat right center;
-        background-size: 13px;
-        background-position: right 5px top 50%, 0 0;
-        padding-left: 15px;
-        font-size: 12px;
-        font-family: OpenSans;
-    }
-    .detail {
-        box-sizing: border-box;
-        width: 100%;
-        padding-left: 15px;
-        height: 130px;
-    }
-    .shipment {
-        width: 100%;
-    }
-    .dropDownList {
-        margin: 0 auto;
-        height: 50px;
-        width: 100%;
+        width: 250px;
+        left: 12%;
+        height: 530px;
     }
 	header {
         background-image: url("../img/banner-mobile.jpg");
@@ -666,10 +682,6 @@ H1 {
 		width: 100%;
 		height: auto;
 	}
-	.aboutProduct::before {
-	    padding: 10% 100% 21vh 10%;
-	    margin-left: -5%;		
-    }
 	.productName {
 		font-size: 17px;
 		line-height: 22px;
@@ -697,81 +709,7 @@ H1 {
 
 /* лпаншеты*/
 
-
-
-
 @media (min-width: 641px) and (max-width: 1200px) {
-    .close {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        display: block;
-        background: url(../svg/form-x.svg) no-repeat right center;
-        margin-left: 50vw;
-        bottom: 525px;
-    }
-    .popap {
-        padding: 3vw;
-        width: 50vw;
-        height: 470px;
-        display: block;
-        position: fixed;
-        top: 40px;
-        left: 20vw;
-        z-index: 10;
-    }
-    .radio {
-        position: absolute;
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        width: 1px;
-    }
-    .radioText {
-        font-size: 14px;
-        font-family: OpenSans;
-    }
-    .radio:checked ~ .radioText::before {
-        background-image: url(../svg/form-circle.svg);
-    }
-    .radioText::before {
-        padding-left: 5px;
-        vertical-align: bottom;
-        z-index: 10;
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-image: url("../svg/form-empty-circle.svg");
-        background-repeat: no-repeat;
-        background-position: centercenter;
-        background-size: 20px;
-    }
-    .question {
-        font-size: 12px;
-    }
-    .dropDownList {
-        appearance: none;
-        background: url(../svg/form-arrows.svg) no-repeat right center;
-        background-size: 13px;
-        background-position: right 5px top 50%, 0 0;
-        padding-left: 15px;
-        font-size: 12px;
-        font-family: OpenSans;
-    }
-    .detail {
-        box-sizing: border-box;
-        width: 100%;
-        padding-left: 15px;
-        height: 130px;
-    }
-    .shipment {
-        width: 100%;
-    }
-    .dropDownList {
-        margin: 0 auto;
-        height: 50px;
-        width: 100%;
-    }
     header {
         background-image: url("../img/banner-bg-tablet.jpg");
         width: 100%;
@@ -936,10 +874,6 @@ H1 {
 	.productPhoto {
 		width: 100%;
 	}
-	.aboutProduct::before {
-	    padding: 10% 100% 180px 10%;
-	    margin-left: -5%;
-    }
 	.productName {
 	    font-size: 20px;
     }
@@ -952,100 +886,21 @@ H1 {
 	.price {
 		line-height: 49px;
 	}
-    .priceList {
-        margin-bottom: 50px;
-    }
     .topFooter {
         padding: 30px 0;
     }
 	.bottomSite {
-		margin-top: 50px;
+		margin-top: 20px;
 	}
-    .bottomSite p {
-        margin: 30px 0 10px 0;
+    .bottomFooter {
+        height: 50px;
     }
 }
 
-
-
 /* МОНИТОРЫ*/
 
-
-
-
 @media (min-width: 1201px) {
-    .close {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        display: block;
-        background: url(../svg/form-x.svg) no-repeat right center;
-        margin-left: 52vw;
-        bottom: 590px;
-    }
-    .popap {
-        padding: 3vw;
-        width: 50vw;
-        height: 470px;
-        display: block;
-        position: fixed;
-        top: 40px;
-        left: 20vw;
-        z-index: 10;
-    }
-    .radio {
-        position: absolute;
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        width: 1px;
-    }
-    .radioText {
-        font-size: 14px;
-        font-family: OpenSans;
-    }
-    .radio:checked ~ .radioText::before {
-        background-image: url(../svg/form-circle.svg);
-    }
-    .radioText::before {
-        padding-left: 5px;
-        vertical-align: bottom;
-        z-index: 10;
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-image: url("../svg/form-empty-circle.svg");
-        background-repeat: no-repeat;
-        background-position: centercenter;
-        background-size: 20px;
-    }
-    .question {
-        font-size: 12px;
-    }
-    .dropDownList {
-        appearance: none;
-        background: url(../svg/form-arrows.svg) no-repeat right center;
-        background-size: 13px;
-        background-position: right 5px top 50%, 0 0;
-        padding-left: 15px;
-        font-size: 12px;
-        font-family: OpenSans;
-    }
-    .detail {
-        box-sizing: border-box;
-        width: 100%;
-        padding-left: 15px;
-        height: 130px;
-    }
-    .shipment {
-        width: 100%;
-    }
-    .dropDownList {
-        margin: 0 auto;
-        height: 50px;
-        width: 100%;
-    }
-	header {
+    header {
         background-image: url("../img/banner-bg.jpg");
         width: 100%;
     } 
@@ -1135,7 +990,6 @@ H1 {
     }
     .post {
         display: flex;
-        height: 294px;
         padding-bottom: 40px;
     }
 
@@ -1154,8 +1008,6 @@ H1 {
 		line-height: 40px;
 	}
     .text {
-        max-height: 10vh;
-        overflow-y: auto;
 		font-size: 15px;
 		line-height: 22px;
         border: none;
@@ -1254,14 +1106,6 @@ H1 {
         margin-top: 60px;
 	}
     .bottomFooter {
-        display: block;
-        width: 218px;
-        margin: 0 auto;
+        height: 70px;
     }
-  
 }
-
-
-
-
-

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +9,10 @@
 </head>
 <body>
    <div class="popap">
-      <buton class="close"></buton>
+      <a href="#" class="close"><span class="visually-hidden">кнопка закрытия popap</span></a>
        <h2 class="trend">ваш фидбек</h2>
     	<div class="empty"></div>
-    	<form action="">
+    	<form action="#">
     	    <div class="question"><p>Как часто вы заходите на сайт?</p></div>
     	    <select class="dropDownList">
                 <option class="choice">Почти каждый день</option>
@@ -21,20 +21,18 @@
             </select>
             <div class="question"><p>Вы подписаны на e-mail рассылку?</p></div>
                 <label class="radio-group">  
-                    <input type="radio"class="radio"name="radio-group">  
+                    <input type="radio" class="radio" name="radio-group">  
                     <span class="radioText">Мужской</span>
                 </label>
                 <label class="radio-group">  
-                    <input type="radio"class="radio"name="radio-group">  
+                    <input type="radio" class="radio" name="radio-group">  
                     <span class="radioText">Женский</span>
                 </label>
                 <div class="question"><p>Расскажите какой контент вы хотели бы видеть на нашем сайте?</p></div>
             <textarea class="detail" placeholder="Может, больше рецептов?"></textarea>
             <button class="shipment" type="submit"><span>отправить</span></button>
     	</form>
-    	
    </div>
-   
     <header>
         <div class="topLine">
            <div class="logo"><a href="index.html"><img src="svg/noemi-logo.svg" alt=""></a></div>
@@ -96,11 +94,11 @@
     					<li><a class="linkTeg" href="#">Travel</a></li>
     					<li><a class="linkTeg" href="#">Health</a></li>
     				</ul>
-    					<li><h3><a class="linkPost" href="#">10 мест, ради которых стоит проснуться на рассвете</a></h3></li>
+    				<h3><a class="linkPost" href="#">10 мест, ради которых стоит проснуться на рассвете</a></h3>
     				<div class="author">
                       <time datetime="2002-09-15">10 июня 2019</time>
                       <span>Неизвестный автор</span>
-                      <div class="text"><p>Итак, вы&nbsp;в&nbsp;Питере. Ранее утро. Лёд с&nbsp;рек и&nbsp;каналов уже ушёл, запущены фонтаны города...Музеи еще закрыты. Что посмотреть?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure minima ut mollitia illum atque recusandae fugit modi unde rem quod, labore vero at, maxime cum in. Temporibus delectus itaque tenetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat incidunt porro architecto modi, quibusdam ipsa adipisci quod impedit magni nulla. Fuga optio quod quibusdam voluptates illo, vitae atque deserunt dolor!</p></div>
+                      <div class="text"><p>Итак, вы&nbsp;в&nbsp;Питере. Ранее утро. Лёд с&nbsp;рек и&nbsp;каналов уже ушёл, запущены фонтаны города...Музеи еще закрыты. Что посмотреть?</p></div>
                     </div>
     			</div>
     		</article>
@@ -110,8 +108,8 @@
     				<ul>
     					<li><a class="linkTeg" href="#">health</a></li>
     					<li><a class="linkTeg" href="#">lifestyle</a></li>
-    					<li><h3><a class="linkPost" href="#">Йога для начинающий в домашних условиях</a></h3></li>
     				</ul>
+    				<h3><a class="linkPost" href="#">Йога для начинающий в домашних условиях</a></h3>
     				<div class="author">
                       <time datetime="2002-09-15">10 июня 2019</time>
                       <span>Неизвестный автор</span>
@@ -124,8 +122,8 @@
     			<div class="fillingPost">
     				<ul>
     					<li><a class="linkTeg" href="#">music</a></li>
-    					<li><h3><a class="linkPost" href="#">Лучшие музыкальные фестивали этого лета</a></h3></li>
     				</ul>
+    				<h3><a class="linkPost" href="#">Лучшие музыкальные фестивали этого лета</a></h3>
     				<div class="author">
                       <time datetime="2002-09-15">10 июня 2019</time>
                       <span>Неизвестный автор</span>
@@ -139,8 +137,8 @@
     				<ul>
     					<li><a class="linkTeg" href="#">lyfestyle</a></li>
     					<li><a class="linkTeg" href="#">food</a></li>
-    					<li><h3><a class="linkPost" href="#">Наукоёмкий подход к кулинарии</a></h3></li>
     				</ul>
+    				<h3><a class="linkPost" href="#">Наукоёмкий подход к кулинарии</a></h3>
     				<div class="author">
                       <time datetime="2002-09-15">10 июня 2019</time>
                       <span>Неизвестный автор</span>
@@ -155,8 +153,8 @@
     					<li><a class="linkTeg" href="#">lyfestyle</a></li>
     					<li><a class="linkTeg" href="#">inerior</a></li>
     					<li><a class="linkTeg" href="#">art</a></li>
-    					<li><h3><a class="linkPost" href="#">Делаем модные принты на подушках для интерьера</a></h3></li>
     				</ul>
+    				<h3><a class="linkPost" href="#">Делаем модные принты на подушках для интерьера</a></h3>
     				<div class="author">
                       <time datetime="2002-09-15">10 июня 2019</time>
                       <span>Неизвестный автор</span>
@@ -208,13 +206,15 @@
     		</article>
     	</section>
 		<form class="field" action="#">
-			<input class="inputField" placeholder="Найти..." type="search" required><span class="visually-hidden">Это поле поиска по сайту</span>
+			<input class="inputField" placeholder="Найти..." type="search" required>
 			<button class="pushbutton" type="submit"><span class="visually-hidden">Это кнопка поиска по сайту</span></button>
 		</form>
 		<form class="mailing" action="#">
 		<h2 class="trend">рассылка</h2>
 		<div class="empty"></div>
-			<input class="mailField" type="email" placeholder="Ваш email-адрес" required><span class="visually-hidden">Это поле ввода e-mail для раасылки</span>
+		  <label>
+			<input class="mailField" type="email" placeholder="Ваш email-адрес" required><span class="visually-hidden">поле ввода e-mail</span>
+          </label>
 			<button class="signature" type="submit"><span class="subscribe">Подписаться</span></button>
 		</form>
 		<aside class="tags">
@@ -332,7 +332,7 @@
 		</div>
 		<footer class = "bottomSite">
             <ul class = "topFooter">
-              <li><a class = "tweet" href="#"></a><span class="visually-hidden">Это твиттер</span></li>
+              <li><a class = "tweet" href="#"><span class="visually-hidden">Это твиттер</span></a></li>
               <li><a class = "pinterest" href="#"><span class="visually-hidden">Это пинтерест</span></a></li>
               <li><a class = "facebook" href="#"><span class="visually-hidden">Это фейсбук</span></a></li>
               <li><a class = "instagram" href="#"><span class="visually-hidden">Это инстаграмм</span></a></li>

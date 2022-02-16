@@ -23,27 +23,6 @@ body {
     font-family: 'Open Sans';
     
 }
-html::before {
-    content: " ";
-    position: absolute;
-    background-color: #000000;
-    opacity: 0.6;
-    top: 0;
-    right: 0;
-    bottom: 0px;
-    left: 0;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
 
 a {
     text-decoration: none;
@@ -57,14 +36,14 @@ li {
     position: absolute;
     width: 20px;
     height: 20px;
-    display: block;
     background: url(../svg/form-x.svg) no-repeat right center;
     margin-left: 88%;
     top: -25px;
 }
-
-.hidden {
+.visually-hidden {
     visibility: hidden;
+}
+.popap {
     left: 40%;
     background-color: #ffffff;
     padding: 20px;
@@ -73,6 +52,18 @@ li {
     position: fixed;
     top: 100px;
     z-index: 10;
+}
+
+._hidden::before {
+    content: " ";
+    position: fixed;
+    background-color: #000000;
+    opacity: 0.6;
+    top: 0;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+
 }
 
 .radio {
@@ -113,12 +104,11 @@ li {
 
 .dropDownList {
     font-family: OpenSans;
-    background-color: #f4f7f6;
     outline: none;
     border: none;
     color: #000000;
     appearance: none;
-    background: url(../svg/form-arrows.svg) no-repeat right center;
+    background: #f4f7f6 url(../svg/form-arrows.svg) no-repeat right center;
     background-size: 13px;
     background-position: right 5px top 50%, 0 0;
     padding-left: 15px;

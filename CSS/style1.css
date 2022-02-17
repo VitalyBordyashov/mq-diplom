@@ -32,6 +32,34 @@ li {
     list-style-type: none;
 }
 
+._hidden {
+    visibility: hidden;
+}
+
+.visually-hidden {
+    visibility: hidden;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 9;
+}
+
+.popup-container {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 390px;
+    height: 600px;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    transform:translateX(-50%);
+    top: 20%;
+}
+
 .close {
     position: absolute;
     width: 20px;
@@ -39,33 +67,6 @@ li {
     background: url(../svg/form-x.svg) no-repeat right center;
     margin-left: 88%;
     top: -25px;
-}
-
-.visually-hidden {
-    visibility: hidden;
-}
-
-.popap-container {
-    left: 40%;
-    background-color: #ffffff;
-    padding: 20px;
-    width: 390px;
-    height: 600px;
-    position: fixed;
-    top: 100px;
-    z-index: 10;
-}
-
-._hidden::before {
-    content: " ";
-    position: fixed;
-    background-color: #000000;
-    opacity: 0.6;
-    top: 0;
-    right: 0;
-    bottom: 0px;
-    left: 0;
-
 }
 
 .radio {
